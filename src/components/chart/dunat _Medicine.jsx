@@ -4,7 +4,7 @@ import React, { useState } from "react";
 import dynamic from "next/dynamic";
 import ReactApexChart from "react-apexcharts";
 // Charger ReactApexChart uniquement côté client
-//const ReactApexChart = dynamic(() => import("react-apexcharts"), { ssr: false });
+//const ReactApexChart = dynamic(() => import("react-apexcharts"), vvvvvv{ ssr: false });
 
 const DunatMedicine = () => {
   const [chartState, setChartState] = useState({

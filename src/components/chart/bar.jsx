@@ -3,7 +3,7 @@
 import React, { useState } from "react";
 import dynamic from "next/dynamic";
 
-// Dynamically import ReactApexChart to disable SSR
+// Dynamica     ly import ReactApexChart to disable SSR
 const ReactApexChart = dynamic(() => import("react-apexcharts"), { ssr: false });
 
 const Bar = () => {
