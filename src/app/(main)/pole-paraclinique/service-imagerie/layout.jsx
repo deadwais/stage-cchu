@@ -1,6 +1,6 @@
 "use client"
 
-import SImagerieMenu from "@/components/Menus/SImagerieMenu";
+import SImagerieMenu from "@/components/Menu/SImagerieMenu";
 import { useState } from "react";
 import Logo from "@/components/Logo";
 import UserInfo from "@/components/UserInfo";

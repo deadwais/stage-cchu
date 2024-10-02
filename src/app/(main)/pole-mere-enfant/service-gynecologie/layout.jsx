@@ -1,7 +1,7 @@
 "use client"
 
 import Logo from "@/components/Logo";
-import SGynecologieMenu from "@/components/Menus/SGynecologieMenu";
+import SGynecologieMenu from "@/components/Menu/SGynecologieMenu";
 import UserInfo from "@/components/UserInfo";
 import { useState } from "react";
 

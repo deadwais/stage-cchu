@@ -12,17 +12,7 @@ const SOphtalmologieHospitalisationsPage = () => {
         {/* Titre */}
         <h1 className="text-lg font-semibold mb-2">Liste des hospitalisations</h1>
 
-        <div className="flex flex-col items-end md:flex-row md:items-center justify-between gap-2">
-          {/* Barre de recherche */}
-          <Recherche/>
-
-          {/* BOUTONS */}
-          <div className="flex gap-7 me-4">
-            <FiltrerBtn/>
-            <ExporterBtn/>
-            <AjouterBtn/>
-          </div>
-        </div>
+     
       </div>
 
       {/* TABLEAU */}

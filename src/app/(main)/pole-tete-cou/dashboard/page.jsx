@@ -1,6 +1,8 @@
 import Annees from "@/components/Annees"
 import Cards from "@/components/Cards"
-
+import DunatOptomo from "@/components/chart/dunat_Optomo"
+import Curv from "@/components/chart/curv"
+import Bar from "@/components/chart/bar"
 const PTeteCouDashboardPage = () => {
   return (
     <div className="">
@@ -27,8 +29,9 @@ const PTeteCouDashboardPage = () => {
             {/* CHART */}
             <div className="w-72 h-72 ">
               {/* <Image src="/test.ico" alt="temp" width={300} height={300} /> */}
+              <DunatOptomo/>
             </div>
-            {/* LEGENDES */}
+            {/* LEGENDES 
             <div className="">
               <div className="flex gap-1 items-center">
                 <div className="w-3 h-3 bg-black border"></div>
@@ -50,7 +53,7 @@ const PTeteCouDashboardPage = () => {
                 <div className="w-3 h-3 bg-yellow-500 border"></div>
                 <span className="text-sm">Legende 5</span>
               </div>
-            </div>
+            </div>*/}
           </div>
         </div>
 
@@ -66,8 +69,9 @@ const PTeteCouDashboardPage = () => {
             {/* CHART */}
             <div className="w-full h-40 my-1">
               {/* <Image src="/test.ico" alt="temp" width={300} height={300} /> */}
+              <Bar/>
             </div>
-            {/* LEGENDES */}
+            {/* LEGENDES
             <div className="flex justify-center gap-5">
               <div className="flex gap-1 items-center">
                 <div className="w-3 h-3 bg-black border"></div>
@@ -81,7 +85,7 @@ const PTeteCouDashboardPage = () => {
                 <div className="w-3 h-3 bg-green-600 border"></div>
                 <span className="text-xs">Legende 3</span>
               </div>
-            </div>
+            </div> */}
           </div>
 
           {/* BAS */}
@@ -93,6 +97,7 @@ const PTeteCouDashboardPage = () => {
             {/* CHART */}
             <div className="w-full h-48 my-1">
               {/* <Image src="/test.ico" alt="temp" width={300} height={300} /> */}
+              <Curv/>
             </div>
           </div>
 

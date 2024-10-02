@@ -1,6 +1,6 @@
 "use client"
 
-import SMedecineInterneMenu from "@/components/Menus/SMedecineInterneMenu";
+import SMedecineInterneMenu from "@/components/Menu/SMedecineInterneMenu";
 import { useState } from "react";
 import Logo from "@/components/Logo";
 import UserInfo from "@/components/UserInfo";

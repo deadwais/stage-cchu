@@ -1,4 +1,4 @@
-import PMedecineMenu from "@/components/Menus/PMedecineMenu";
+import PMedecineMenu from "@/components/Menu/PMedecineMenu";
 import Logo from "@/components/Logo";
 import UserInfo from "@/components/UserInfo";
 

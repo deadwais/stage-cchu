@@ -1,6 +1,27 @@
 "use client"
 
 import { useState } from "react"
+import KeyboardArrowUpOutlinedIcon from '@mui/icons-material/KeyboardArrowUpOutlined';
+import KeyboardArrowDownOutlinedIcon from '@mui/icons-material/KeyboardArrowDownOutlined';
+import AddCircleOutlinedIcon from '@mui/icons-material/AddCircleOutlined';
+import LocalHotelIcon from '@mui/icons-material/LocalHotel';
+import DeviceThermostatIcon from '@mui/icons-material/DeviceThermostat';
+import ScienceIcon from '@mui/icons-material/Science';
+
+import MonitorWeightOutlinedIcon from '@mui/icons-material/MonitorWeightOutlined';
+
+import BloodtypeOutlinedIcon from '@mui/icons-material/BloodtypeOutlined';
+import LocalHospitalOutlinedIcon from '@mui/icons-material/LocalHospitalOutlined';
+import MedicationLiquidIcon from '@mui/icons-material/MedicationLiquid'
+
+
+import MonitorHeartTwoToneIcon from '@mui/icons-material/MonitorHeartTwoTone';
+import MedicationLiquidTwoToneIcon from '@mui/icons-material/MedicationLiquidTwoTone';
+import BloodtypeTwoToneIcon from '@mui/icons-material/BloodtypeTwoTone';
+import SaveTwoToneIcon from '@mui/icons-material/SaveTwoTone';
+import ScienceTwoToneIcon from '@mui/icons-material/ScienceTwoTone';
+import LocalHotelTwoToneIcon from '@mui/icons-material/LocalHotelTwoTone';
+import ThermostatAutoTwoToneIcon from '@mui/icons-material/ThermostatAutoTwoTone';
 
 const SMedecineInterneHospitalisationPage = () => {
   const [accordion, setAccordion] = useState(0);
@@ -54,19 +75,52 @@ const SMedecineInterneHospitalisationPage = () => {
           {/* 1.VISITES */}
           <div className="w-full border-collapse">
             <div className={accordion === 1 ? "border font-medium p-2 flex justify-between items-center rounded-t-xl bg-bleu text-white" : "border font-medium p-2 flex justify-between items-center bg-white rounded-t-xl"}>
-              <span className={accordion === 1 ? "" : ""}>Visites effectuées</span>
-              <button onClick={() => {setAccordion(1)}} className={accordion === 1 ? "hidden" : ""}>+</button>
-              <button onClick={() => {setAccordion(0)}} className={accordion === 1 ? "" : "hidden"}>-</button>
-            </div>
-            <div className={accordion === 1 ? "border p-2 h-28 overflow-auto" : "hidden"}>
-              <div className="">Item 1</div>
-              <div className="">Item 2</div>
-              <div className="">Item 3</div>
-            </div>
-          </div>
+            <button ><AddCircleOutlinedIcon/></button>
+             <span className={accordion === 1 ? "" : ""}>Visites effectuées   <LocalHotelTwoToneIcon /> </span>
+              <button onClick={() => {setAccordion(1)}} className={accordion === 1 ? "hidden" : ""}><KeyboardArrowUpOutlinedIcon /></button>
+              <button onClick={() => {setAccordion(0)}} className={accordion === 1 ? "" : "hidden"}><KeyboardArrowDownOutlinedIcon/></button> 
 
+            </div>
+         
+            <div className={accordion === 1 ? "border p-2 max-h-28 overflow-y-auto" : "hidden"}>
+    <div className="space-y-2">
+      <div  className="p-2 bg-gray-100 rounded-lg">Item 1 fffff fffff</div>
+      <div className="p-2 bg-gray-100 rounded-lg">Item 2</div>
+      <div className="p-2 bg-gray-100 rounded-lg">Item 3</div>
+      <div className="p-2 bg-gray-100 rounded-lg">Item 4</div>
+      <div className="p-2 bg-gray-100 rounded-lg">Item 5</div>
+      <div className="p-2 bg-gray-100 rounded-lg">Item 6</div>
+      <div className="p-2 bg-gray-100 rounded-lg">Item 7</div>
+    </div>
+  </div>
+          </div>
           {/* 2.PARAMETRES */}
           <div className="w-full border-collapse">
+  {/* Accordéon header */}
+  <div className={accordion === 2 ? "border font-medium p-2 flex justify-between items-center bg-bleu text-white" : "border font-medium p-2 flex justify-between items-center bg-white"}>
+  <button ><AddCircleOutlinedIcon/></button>
+    <span>Paramètres pris <ThermostatAutoTwoToneIcon /> </span>
+    
+    <button onClick={() => { setAccordion(2) }} className={accordion === 2 ? "hidden" : ""}><KeyboardArrowUpOutlinedIcon /></button>
+    <button onClick={() => { setAccordion(0) }} className={accordion === 2 ? "" : "hidden"}><KeyboardArrowDownOutlinedIcon/></button>
+   
+  </div>
+
+  {/* Accordéon body avec scrolling */}
+  <div className={accordion === 2 ? "border p-2 max-h-28 overflow-y-auto" : "hidden"}>
+    <div className="space-y-2">
+      <div  className="p-2 bg-gray-100 rounded-lg">Item 1</div>
+      <div className="p-2 bg-gray-100 rounded-lg">Item 2</div>
+      <div className="p-2 bg-gray-100 rounded-lg">Item 3</div>
+      <div className="p-2 bg-gray-100 rounded-lg">Item 4</div>
+      <div className="p-2 bg-gray-100 rounded-lg">Item 5</div>
+      <div className="p-2 bg-gray-100 rounded-lg">Item 6</div>
+      <div className="p-2 bg-gray-100 rounded-lg">Item 7</div>
+    </div>
+  </div>
+</div>
+
+       {/* 2.PARAMETRES   <div className="w-full border-collapse">
             <div className={accordion === 2 ? "border font-medium p-2 flex justify-between items-center bg-bleu text-white" : "border font-medium p-2 flex justify-between items-center bg-white"}>
               <span className={accordion === 2 ? "" : ""}>Paramètres pris</span>
               <button onClick={() => {setAccordion(2)}} className={accordion === 2 ? "hidden" : ""}>+</button>
@@ -77,90 +131,136 @@ const SMedecineInterneHospitalisationPage = () => {
               <div className="">Item 2</div>
               <div className="">Item 3</div>
             </div>
-          </div>
+          </div>*/} 
 
           {/* 3.LABO */}
           <div className="w-full border-collapse">
             <div className={accordion === 3 ? "border font-medium p-2 flex justify-between items-center bg-bleu text-white" : "border font-medium p-2 flex justify-between items-center bg-white"}>
-              <span className={accordion === 3 ? "" : ""}>Bilans labo effectués</span>
-              <button onClick={() => {setAccordion(3)}} className={accordion === 3 ? "hidden" : ""}>+</button>
-              <button onClick={() => {setAccordion(0)}} className={accordion === 3 ? "" : "hidden"}>-</button>
+            <button onClick={() => {setAccordion(1)}} className={accordion === 1 ? "hidden" : ""}><AddCircleOutlinedIcon/></button>
+              <span className={accordion === 3 ? "" : ""}>Bilans labo effectués <ScienceTwoToneIcon/> </span>
+              <button onClick={() => {setAccordion(3)}} className={accordion === 3 ? "hidden" : ""}><KeyboardArrowUpOutlinedIcon /></button>
+              <button onClick={() => {setAccordion(0)}} className={accordion === 3 ? "" : "hidden"}><KeyboardArrowDownOutlinedIcon/></button>
             </div>
-            <div className={accordion === 3 ? "border p-2 h-28 overflow-auto" : "hidden"}>
-              <div className="">Item 1</div>
-              <div className="">Item 2</div>
-              <div className="">Item 3</div>
-            </div>
+             
+            <div className={accordion === 3 ? "border p-2 max-h-28 overflow-y-auto" : "hidden"}>
+    <div className="space-y-2">
+      <div  className="p-2 bg-gray-100 rounded-lg">Item 1</div>
+      <div className="p-2 bg-gray-100 rounded-lg">Item 2</div>
+      <div className="p-2 bg-gray-100 rounded-lg">Item 3</div>
+      <div className="p-2 bg-gray-100 rounded-lg">Item 4</div>
+      <div className="p-2 bg-gray-100 rounded-lg">Item 5</div>
+      <div className="p-2 bg-gray-100 rounded-lg">Item 6</div>
+      <div className="p-2 bg-gray-100 rounded-lg">Item 7</div>
+    </div>
           </div>
-
+          </div>
           {/* 4.RADIO */}
           <div className="w-full border-collapse">
             <div className={accordion === 4 ? "border font-medium p-2 flex justify-between items-center bg-bleu text-white" : "border font-medium p-2 flex justify-between items-center bg-white"}>
-              <span className={accordion === 4 ? "" : ""}>Examens radio effectuées</span>
-              <button onClick={() => {setAccordion(4)}} className={accordion === 4 ? "hidden" : ""}>+</button>
-              <button onClick={() => {setAccordion(0)}} className={accordion === 4 ? "" : "hidden"}>-</button>
+            <button ><AddCircleOutlinedIcon/></button> <span className={accordion === 4 ? "" : ""}>Examens radio effectuées <SaveTwoToneIcon/> </span>
+              <button onClick={() => {setAccordion(4)}} className={accordion === 4 ? "hidden" : ""}><KeyboardArrowUpOutlinedIcon /></button>
+              <button onClick={() => {setAccordion(0)}} className={accordion === 4 ? "" : "hidden"}><KeyboardArrowDownOutlinedIcon/></button>
             </div>
-            <div className={accordion === 4 ? "border p-2 h-28 overflow-auto" : "hidden"}>
-              <div className="">Item 1</div>
-              <div className="">Item 2</div>
-              <div className="">Item 3</div>
-            </div>
+           
+            <div className={accordion === 4 ? "border p-2 max-h-28 overflow-y-auto" : "hidden"}>
+    <div className="space-y-2">
+      <div  className="p-2 bg-gray-100 rounded-lg">Item 1</div>
+      <div className="p-2 bg-gray-100 rounded-lg">Item 2</div>
+      <div className="p-2 bg-gray-100 rounded-lg">Item 3</div>
+      <div className="p-2 bg-gray-100 rounded-lg">Item 4</div>
+      <div className="p-2 bg-gray-100 rounded-lg">Item 5</div>
+      <div className="p-2 bg-gray-100 rounded-lg">Item 6</div>
+      <div className="p-2 bg-gray-100 rounded-lg">Item 7</div>
+    </div>
+          </div>
           </div>
 
           {/* 5.ECHO */}
           <div className="w-full border-collapse">
             <div className={accordion === 5 ? "border font-medium p-2 flex justify-between items-center bg-bleu text-white" : "border font-medium p-2 flex justify-between items-center bg-white"}>
-              <span className={accordion === 5 ? "" : ""}>Examens echo effectuées</span>
-              <button onClick={() => {setAccordion(5)}} className={accordion === 5 ? "hidden" : ""}>+</button>
-              <button onClick={() => {setAccordion(0)}} className={accordion === 5 ? "" : "hidden"}>-</button>
+            <button onClick={() => {setAccordion(1)}} className={accordion === 1 ? "hidden" : ""}><AddCircleOutlinedIcon/></button>
+              <span className={accordion === 5 ? "" : ""}>Examens echo effectuées <SaveTwoToneIcon/> </span>
+              <button onClick={() => {setAccordion(5)}} className={accordion === 5 ? "hidden" : ""}><KeyboardArrowUpOutlinedIcon /></button>
+              <button onClick={() => {setAccordion(0)}} className={accordion === 5 ? "" : "hidden"}><KeyboardArrowDownOutlinedIcon/></button>
             </div>
-            <div className={accordion === 5 ? "border p-2 h-28 overflow-auto" : "hidden"}>
-              <div className="">Item 1</div>
-              <div className="">Item 2</div>
-              <div className="">Item 3</div>
-            </div>
+              
+            <div className={accordion === 5 ? "border p-2 max-h-28 overflow-y-auto" : "hidden"}>
+    <div className="space-y-2">
+      <div  className="p-2 bg-gray-100 rounded-lg">Item 1</div>
+      <div className="p-2 bg-gray-100 rounded-lg">Item 2</div>
+      <div className="p-2 bg-gray-100 rounded-lg">Item 3</div>
+      <div className="p-2 bg-gray-100 rounded-lg">Item 4</div>
+      <div className="p-2 bg-gray-100 rounded-lg">Item 5</div>
+      <div className="p-2 bg-gray-100 rounded-lg">Item 6</div>
+      <div className="p-2 bg-gray-100 rounded-lg">Item 7</div>
+    </div>
+          </div>
           </div>
 
           {/* 6.TRANSFUSION */}
           <div className="w-full border-collapse">
             <div className={accordion === 6 ? "border font-medium p-2 flex justify-between items-center bg-bleu text-white" : "border font-medium p-2 flex justify-between items-center bg-white"}>
-              <span className={accordion === 6 ? "" : ""}>Transfusions effectuées</span>
-              <button onClick={() => {setAccordion(6)}} className={accordion === 6 ? "hidden" : ""}>+</button>
-              <button onClick={() => {setAccordion(0)}} className={accordion === 6 ? "" : "hidden"}>-</button>
+            <button onClick={() => {setAccordion(1)}} className={accordion === 1 ? "hidden" : ""}><AddCircleOutlinedIcon/></button>
+              <span className={accordion === 6 ? "" : ""}>Transfusions effectuées <BloodtypeTwoToneIcon /> </span>
+              <button onClick={() => {setAccordion(6)}} className={accordion === 6 ? "hidden" : ""}><KeyboardArrowUpOutlinedIcon /></button>
+              <button onClick={() => {setAccordion(0)}} className={accordion === 6 ? "" : "hidden"}><KeyboardArrowDownOutlinedIcon/></button>
             </div>
-            <div className={accordion === 6 ? "border p-2 h-28 overflow-auto" : "hidden"}>
-              <div className="">Item 1</div>
-              <div className="">Item 2</div>
-              <div className="">Item 3</div>
-            </div>
+              
+            <div className={accordion ===6  ? "border p-2 max-h-28 overflow-y-auto" : "hidden"}>
+    <div className="space-y-2">
+      <div  className="p-2 bg-gray-100 rounded-lg">Item 1</div>
+      <div className="p-2 bg-gray-100 rounded-lg">Item 2</div>
+      <div className="p-2 bg-gray-100 rounded-lg">Item 3</div>
+      <div className="p-2 bg-gray-100 rounded-lg">Item 4</div>
+      <div className="p-2 bg-gray-100 rounded-lg">Item 5</div>
+      <div className="p-2 bg-gray-100 rounded-lg">Item 6</div>
+      <div className="p-2 bg-gray-100 rounded-lg">Item 7</div>
+    </div>
+          </div>
           </div>
 
           {/* 7.TRAITEMENT */}
           <div className="w-full border-collapse">
             <div className={accordion === 7 ? "border font-medium p-2 flex justify-between items-center bg-bleu text-white" : "border font-medium p-2 flex justify-between items-center bg-white"}>
-              <span className={accordion === 7 ? "" : ""}>Traitements préscrits</span>
-              <button onClick={() => {setAccordion(7)}} className={accordion === 7 ? "hidden" : ""}>+</button>
-              <button onClick={() => {setAccordion(0)}} className={accordion === 7 ? "" : "hidden"}>-</button>
+            <button onClick={() => {setAccordion(1)}} className={accordion === 1 ? "hidden" : ""}><AddCircleOutlinedIcon/></button>
+              <span className={accordion === 7 ? "" : ""}>Traitements préscrits <MedicationLiquidTwoToneIcon/> </span>
+              <button onClick={() => {setAccordion(7)}} className={accordion === 7 ? "hidden" : ""}><KeyboardArrowUpOutlinedIcon /></button>
+              <button onClick={() => {setAccordion(0)}} className={accordion === 7 ? "" : "hidden"}><KeyboardArrowDownOutlinedIcon/></button>
             </div>
-            <div className={accordion === 7 ? "border p-2 h-28 overflow-auto" : "hidden"}>
-              <div className="">Item 1</div>
-              <div className="">Item 2</div>
-              <div className="">Item 3</div>
-            </div>
+              
+            <div className={accordion === 7 ? "border p-2 max-h-28 overflow-y-auto" : "hidden"}>
+    <div className="space-y-2">
+      <div  className="p-2 bg-gray-100 rounded-lg">Item 1</div>
+      <div className="p-2 bg-gray-100 rounded-lg">Item 2</div>
+      <div className="p-2 bg-gray-100 rounded-lg">Item 3</div>
+      <div className="p-2 bg-gray-100 rounded-lg">Item 4</div>
+      <div className="p-2 bg-gray-100 rounded-lg">Item 5</div>
+      <div className="p-2 bg-gray-100 rounded-lg">Item 6</div>
+      <div className="p-2 bg-gray-100 rounded-lg">Item 7</div>
+    </div>
+          </div>
           </div>
 
           {/* 8.INTERVENTION */}
           <div className="w-full border-collapse">
             <div className={accordion === 8 ? "border font-medium p-2 flex justify-between items-center bg-bleu text-white" : "border font-medium p-2 flex justify-between items-center bg-white rounded-b-xl"}>
-              <span className={accordion === 8 ? "" : ""}>Interventions chirurgicales effectuées</span>
-              <button onClick={() => {setAccordion(8)}} className={accordion === 8 ? "hidden" : ""}>+</button>
-              <button onClick={() => {setAccordion(0)}} className={accordion === 8 ? "" : "hidden"}>-</button>
+            <button onClick={() => {setAccordion(1)}} className={accordion === 1 ? "hidden" : ""}><AddCircleOutlinedIcon/></button>
+              <span className={accordion === 8 ? "" : ""}>Interventions chirurgicales effectuées <MonitorHeartTwoToneIcon/> </span>
+              <button onClick={() => {setAccordion(8)}} className={accordion === 8 ? "hidden" : ""}><KeyboardArrowUpOutlinedIcon /></button>
+              <button onClick={() => {setAccordion(0)}} className={accordion === 8 ? "" : "hidden"}><KeyboardArrowDownOutlinedIcon/></button>
             </div>
-            <div className={accordion === 8 ? "border p-2 h-28 overflow-auto rounded-b-xl" : "hidden"}>
-              <div className="">Item 1</div>
-              <div className="">Item 2</div>
-              <div className="">Item 3</div>
-            </div>
+              
+            <div className={accordion === 8 ? "border p-2 max-h-28 overflow-y-auto" : "hidden"}>
+    <div className="space-y-2">
+      <div  className="p-2 bg-gray-100 rounded-lg">Item 1</div>
+      <div className="p-2 bg-gray-100 rounded-lg">Item 2</div>
+      <div className="p-2 bg-gray-100 rounded-lg">Item 3</div>
+      <div className="p-2 bg-gray-100 rounded-lg">Item 4</div>
+      <div className="p-2 bg-gray-100 rounded-lg">Item 5</div>
+      <div className="p-2 bg-gray-100 rounded-lg">Item 6</div>
+      <div className="p-2 bg-gray-100 rounded-lg">Item 7</div>
+    </div>
+          </div>
           </div>
           
         </div>

@@ -1,5 +1,5 @@
 import Logo from "@/components/Logo"
-import PMereEnfantMenu from "@/components/Menus/PMereEnfantMenu"
+import PMereEnfantMenu from "@/components/Menu/PMereEnfantMenu"
 import UserInfo from "@/components/UserInfo"
 
 const PMereEnfantLayout = ({children}) => {

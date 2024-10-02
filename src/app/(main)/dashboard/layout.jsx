@@ -1,4 +1,4 @@
-import HopitalMenu from "@/components/Menus/HopitalMenu";
+import HopitalMenu from "@/components/Menu/HopitalMenu";
 import Logo from "@/components/Logo";
 import UserInfo from "@/components/UserInfo";
 

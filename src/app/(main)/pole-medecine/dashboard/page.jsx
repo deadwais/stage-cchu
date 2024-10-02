@@ -1,6 +1,8 @@
 import Annees from "@/components/Annees"
 import Cards from "@/components/Cards"
-
+import Bar from "@/components/chart/bar"
+import Curv from "@/components/chart/curv"
+import DunatMedicine from "@/components/chart/dunat _Medicine"
 const PMedecineDashboardPage = () => {
   return (
     <div className="">
@@ -27,8 +29,9 @@ const PMedecineDashboardPage = () => {
             {/* CHART */}
             <div className="w-72 h-72 ">
               {/* <Image src="/test.ico" alt="temp" width={300} height={300} /> */}
+              <DunatMedicine/>
             </div>
-            {/* LEGENDES */}
+            {/* LEGENDES 
             <div className="">
               <div className="flex gap-1 items-center">
                 <div className="w-3 h-3 bg-black border"></div>
@@ -50,7 +53,7 @@ const PMedecineDashboardPage = () => {
                 <div className="w-3 h-3 bg-yellow-500 border"></div>
                 <span className="text-sm">Legende 5</span>
               </div>
-            </div>
+            </div>*/}
           </div>
         </div>
 
@@ -65,9 +68,10 @@ const PMedecineDashboardPage = () => {
             </div>
             {/* CHART */}
             <div className="w-full h-40 my-1">
+              <Bar/>
               {/* <Image src="/test.ico" alt="temp" width={300} height={300} /> */}
             </div>
-            {/* LEGENDES */}
+            {/* LEGENDES 
             <div className="flex justify-center gap-5">
               <div className="flex gap-1 items-center">
                 <div className="w-3 h-3 bg-black border"></div>
@@ -81,7 +85,7 @@ const PMedecineDashboardPage = () => {
                 <div className="w-3 h-3 bg-green-600 border"></div>
                 <span className="text-xs">Legende 3</span>
               </div>
-            </div>
+            </div>*/}
           </div>
 
           {/* BAS */}
@@ -93,6 +97,7 @@ const PMedecineDashboardPage = () => {
             {/* CHART */}
             <div className="w-full h-48 my-1">
               {/* <Image src="/test.ico" alt="temp" width={300} height={300} /> */}
+              <Curv/>
             </div>
           </div>
 

@@ -1,4 +1,4 @@
-import PParacliniqueMenu from "@/components/Menus/PParacliniqueMenu";
+import PParacliniqueMenu from "@/components/Menu/PParacliniqueMenu";
 import Logo from "@/components/Logo";
 import UserInfo from "@/components/UserInfo";
 

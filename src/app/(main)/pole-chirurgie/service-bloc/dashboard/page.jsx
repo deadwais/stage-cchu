@@ -1,7 +1,8 @@
 import Annees from "@/components/Annees"
 import Cards from "@/components/Cards"
 import Rangs from "@/components/Rangs"
-
+import Curv from "@/components/chart/curv"
+import Bar from "@/components/chart/bar"
 const SBlocDashboardPage = () => {
   return (
     <div className="">
@@ -28,6 +29,7 @@ const SBlocDashboardPage = () => {
             {/* CHART */}
             <div className="w-full h-72 my-1">
               {/* <Image src="/test.ico" alt="temp" width={300} height={300} /> */}
+              <Curv/>
             </div>
           </div>
 
@@ -43,8 +45,9 @@ const SBlocDashboardPage = () => {
             {/* CHART */}
             <div className="w-full h-40 my-1">
               {/* <Image src="/test.ico" alt="temp" width={300} height={300} /> */}
+              <Bar/>
             </div>
-            {/* LEGENDES */}
+            {/* LEGENDES 
             <div className="flex justify-center gap-5">
               <div className="flex gap-1 items-center">
                 <div className="w-3 h-3 bg-black border"></div>
@@ -58,7 +61,7 @@ const SBlocDashboardPage = () => {
                 <div className="w-3 h-3 bg-green-600 border"></div>
                 <span className="text-xs">Legende 3</span>
               </div>
-            </div>
+            </div>*/}
           </div>
 
           {/* BAS */}

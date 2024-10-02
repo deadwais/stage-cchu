@@ -1,5 +1,5 @@
 import Logo from "@/components/Logo"
-import PTeteCouMenu from "@/components/Menus/PTeteCouMenu"
+import PTeteCouMenu from "@/components/Menu/PTeteCouMenu"
 import UserInfo from "@/components/UserInfo"
 
 const PTeteCouLayout = ({children}) => {

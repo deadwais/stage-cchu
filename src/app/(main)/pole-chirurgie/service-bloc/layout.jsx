@@ -3,7 +3,7 @@
 import { useState } from "react";
 import Logo from "@/components/Logo";
 import UserInfo from "@/components/UserInfo";
-import SBlocMenu from "@/components/Menus/SBlocMenu";
+import SBlocMenu from "@/components/Menu/SBlocMenu";
 
 const SBlocLayout = ({children}) => {
   const [modalOpen, setModalOpen] = useState(false);
