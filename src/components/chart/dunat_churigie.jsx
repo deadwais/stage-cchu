@@ -33,7 +33,7 @@ const DunatChur = () => {
   return (
     <div>
       <div id="chart">
-        <ReactApexChart options={chartState.options} series={chartState.series} type="donut"  width="400" />
+        <ReactApexChart options={chartState.options} series={chartState.series} type="donut"  width="450" />
       </div>
       <div id="html-dist"></div>
     </div>

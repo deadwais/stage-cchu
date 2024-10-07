@@ -11,9 +11,9 @@ const PChirurgieDashboardPage = () => {
 
       {/* CARD BOXES */}
       <div className="flex gap-4 justify-between flex-wrap">
-        <Cards type="Patients" nombre="1023456657"/>
-        <Cards type="Personnels" nombre="150"/>
-        <Cards type="Services" nombre="1"/>
+        <Cards type="Patients" nombre="1023456657" image="/Patient.png" />
+        <Cards type="Personnels" nombre="150" image="/Personnels.png" />
+        <Cards type="Services" nombre="1" image="/service.png" />
       </div>
 
       {/* CHARTS */}

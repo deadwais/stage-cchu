@@ -15,7 +15,7 @@ const PChirurgieMenu = () => {
 
   return (
     <div className="">
-        <Link href="/pole-chirurgie/dashboard" className="menu bg-gray-100 !text-gray-600">
+        <Link href="/pole-chirurgie/dashboard" className="menu bg-gray-100 !text-vert">
           <Home />
           Accueil</Link>
 

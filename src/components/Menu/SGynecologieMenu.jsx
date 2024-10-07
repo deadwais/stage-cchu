@@ -25,7 +25,7 @@ const SGynecologieMenu = () => {
 
           navbar.map((link, i) => {
             const isActive = pathname.startsWith(link.lien)
-            return <Link key={i} href={link.lien} className={isActive ? "menu bg-gray-200 !text-gray-600 font-semibold hover:bg-gray-200": "menu"}>
+            return <Link key={i} href={link.lien} className={isActive ? "menu bg-gray-200 !text-vert font-semibold hover:bg-gray-200": "menu"}>
               {
                   link.titre === "Accueil" && <Home />
               }

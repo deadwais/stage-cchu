@@ -13,10 +13,10 @@ const HopitalDashboardPage = () => {
       
       {/* CARD BOXES */}
       <div className="flex gap-4 justify-between flex-wrap">
-        <Cards type="Patients" nombre="1023456657"/>
-        <Cards type="Personnels" nombre="150"/>
-        <Cards type="Pôles" nombre="7"/>
-        <Cards type="Services" nombre="24"/>
+        <Cards type="Patients" nombre="1023456657" image="/Patient.png" />
+        <Cards type="Personnels" nombre="150" image="/Personnels.png" />
+        <Cards type="Pôles" nombre="7"  image="/pole.png" />
+        <Cards type="Services" nombre="24" image="/service.png"  />
       </div>
 <div className="w"></div>
       {/* CHARTS */}

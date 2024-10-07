@@ -6,15 +6,15 @@ import Bar from "@/components/chart/bar"
 const SBlocDashboardPage = () => {
   return (
     <div className="">
-      {/* ANNEE */}
+      {/* ANNEE rrrrtttt*/}
       <Annees/>
       
       {/* CARD BOXES */}
       <div className="flex gap-4 justify-between flex-wrap">
-        <Cards type="Patients" nombre="1023456"/>
-        <Cards type="Personnels" nombre="150"/>
-        <Cards type="Interventions" nombre="250100"/>
-        <Cards type="Décès" nombre="142"/>
+        <Cards type="Patients" nombre="1023456" image="/Patient.png" />
+        <Cards type="Personnels" nombre="150" image="/Personnels.png"  />
+        <Cards type="Interventions" nombre="250100" image="/intervention1.png" />
+        <Cards type="Décès" nombre="142" image="/mo2.png"/>
       </div>
 
       {/* CHARTS */}

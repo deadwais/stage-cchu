@@ -21,7 +21,7 @@ const HopitalMenu = () => {
 
   return (
     <div>
-        <Link href="/dashboard" className="menu bg-gray-200 !text-gray-600">
+        <Link href="/dashboard" className="menu bg-gray-200 !text-vert ">
           <Home />
           Accueil</Link>
 

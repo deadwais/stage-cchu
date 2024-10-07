@@ -9,9 +9,10 @@ const SBlocMenu = () => {
   const navbar = [
     {lien:"/pole-chirurgie/service-bloc/dashboard", titre:"Accueil"},
     {lien:"/pole-chirurgie/service-bloc/liste-patients", titre:"Patients"},
-    {lien:"/pole-chirurgie/service-bloc/liste-interventions", titre:"Interventions"},
+    {lien:"/pole-chirurgie/service-bloc/liste-interventions", titre:"Archives"},
     {lien:"/pole-chirurgie/service-bloc/liste-programmes", titre:"Programmes"},
     {lien:"/pole-chirurgie/service-bloc/liste-personnels", titre:"Personnels"},
+   
     {lien:"/pole-mere-enfant/service-gynecologie/statistiques", titre:"Statistiques"}
   ]
 
@@ -22,12 +23,13 @@ const SBlocMenu = () => {
 
           navbar.map((link, i) => {
             const isActive = pathname.startsWith(link.lien)
-            return <Link key={i} href={link.lien} className={isActive ? "menu bg-gray-200 !text-gray-600 font-semibold hover:bg-gray-200": "menu"}>
+            return <Link key={i} href={link.lien} className={isActive ? "menu bg-gray-200 !text-vert font-semibold hover:bg-gray-200": "menu"}>
               {link.titre === "Accueil" && <Home /> }
               {link.titre === "Patients" && <Diversity3 /> }
-              {link.titre === "Interventions" && <Emergency /> }
+              {link.titre === "Archives" && <Emergency /> }
               {link.titre === "Programmes" && <Event /> }
               {link.titre === "Personnels" && <Group /> }
+              
               {link.titre === "Statistiques" && <BarChart /> }
               {link.titre}
             </Link>
