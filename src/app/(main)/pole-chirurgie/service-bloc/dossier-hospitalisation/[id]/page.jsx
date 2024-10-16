@@ -1,4 +1,6 @@
 "use client"
+
+import { useState } from "react"
 import KeyboardArrowUpOutlinedIcon from '@mui/icons-material/KeyboardArrowUpOutlined';
 import KeyboardArrowDownOutlinedIcon from '@mui/icons-material/KeyboardArrowDownOutlined';
 import AddCircleOutlinedIcon from '@mui/icons-material/AddCircleOutlined';
@@ -10,7 +12,9 @@ import MonitorWeightOutlinedIcon from '@mui/icons-material/MonitorWeightOutlined
 
 import BloodtypeOutlinedIcon from '@mui/icons-material/BloodtypeOutlined';
 import LocalHospitalOutlinedIcon from '@mui/icons-material/LocalHospitalOutlined';
-import MedicationLiquidIcon from '@mui/icons-material/MedicationLiquid';
+import MedicationLiquidIcon from '@mui/icons-material/MedicationLiquid'
+
+
 import MonitorHeartTwoToneIcon from '@mui/icons-material/MonitorHeartTwoTone';
 import MedicationLiquidTwoToneIcon from '@mui/icons-material/MedicationLiquidTwoTone';
 import BloodtypeTwoToneIcon from '@mui/icons-material/BloodtypeTwoTone';
@@ -18,66 +22,36 @@ import SaveTwoToneIcon from '@mui/icons-material/SaveTwoTone';
 import ScienceTwoToneIcon from '@mui/icons-material/ScienceTwoTone';
 import LocalHotelTwoToneIcon from '@mui/icons-material/LocalHotelTwoTone';
 import ThermostatAutoTwoToneIcon from '@mui/icons-material/ThermostatAutoTwoTone';
-import { useEffect, useState } from "react";
-import { useSearchParams } from 'next/navigation';
 
-import { useRouter } from 'next/navigation';
-const SBlocInterventionPage = () => {
-  const usearchParams= useSearchParams();
-  const id= usearchParams.get('id')
+const SMedecineInterneHospitalisationPage = (params) => {
   const [accordion, setAccordion] = useState(0);
-  const [a, setA] = useState(0);
-  const router = useRouter();
 
-  useEffect(() => {
-    if (id) {
-      console.log(id)
-      setA(id);
-    }
-  }, [id]);
-
-/*const {id}= router.query;
-useEffect(()=>{
-  
-setA(id)
-},[id]) 
-useEffect(() => {
-  const id  = router.query();
-  if (id) {
-    setA(id);
-  }
-}, [router.query]);*/
   return (
     <div className="">
       {/* TITRE */}
-      <h1 className="text-lg font-semibold mb-2">Dossier d'interventions{a} </h1>
+      <h1 className="text-lg font-semibold mb-2">Dossier d'hospitalisation {params.id}</h1>
       
       {/* CORPS */}
-      <div className="flex flex-col lg:flex-row">
-
+      <div className="flex flex-col lg:flex-row gap-4">
         {/* GAUCHE */}
-        <div className="w-full lg:w-2/5 flex flex-col gap-2">
+        <div className="flex flex-col gap-4 w-full lg:w-2/5">
           {/* INFOS */}
-          <div className="bg-white p-2 rounded-2xl w-full text-sm flex flex-col">
-          <h2 className="font-semibold text-xl">RAKOTO Randria (Homme, 42 ans)</h2>
-            <span>Date d'intervention : </span>
-            <span>Heure d'entrée en salle : </span>
-            <span>Heure de début d'intervention : </span>
-            <span>Heure de début d'anesthésie : </span>
-            <span>Heure de fin d'intervention : </span>
-            <span>Heure de sortie de salle : </span>
-            <br />
-            <span>Indication : </span>
-            <span>Type d'intervention : </span>
-            <span>Type d'anesthésie : </span>
-            <span>Compte rendu opératoire : </span>
-            <span>Observation : </span>
-            <span>Issue : </span>
+          <div className="bg-white p-4 rounded-2xl w-full text-sm flex flex-col">
+            <h2 className="font-semibold text-xl">RAKOTO Randria (Homme, 42 ans)</h2>
+            <span>Chambre : </span>
+            <span>Lit : </span>
+            <span>Date d'admission : </span>
+            <span>Type d'admission : </span>
+            <span>Motif d'entrée : </span>
+            <span>Date de sortie : </span>
+            <span>Type de sortie : </span>
+            <span>Diagnostic de sortie : </span>
+            <span>Observation à la sortie : </span>
           </div>
 
           {/* ANTECEDENTS */}
-          <div className="bg-white p-2 rounded-2xl w-full text-sm flex flex-col max-h-[250px] overflow-y-auto">
-            <h2 className="font-semibold">Antécédents</h2>
+          <div className="bg-white p-2 rounded-2xl w-full text-sm flex flex-col max-h-[360px] overflow-y-auto">
+            <h2 className="font-semibold text-lg">Antécédents</h2>
             <h3 className="font-medium">Antécédents personnels</h3>
             <span>Médicaux : Néant</span>
             <span>Chirurgicaux :</span>
@@ -92,25 +66,11 @@ useEffect(() => {
             <span>(Père)</span>
             <span>Chirurgicaux :</span>
           </div>
-
         </div>
 
         {/* DROITE */}
-        <div className="w-full lg:w-3/5 px-2 flex flex-col gap-5">
-          {/* EQUIPE OPERATOIRE */}
-          <div className="bg-white p-2 rounded-2xl w-full text-sm flex flex-col max-h-[250px] overflow-y-auto">
-            <h2 className="font-semibold text-base">Equipe opératoire</h2>
-            <span>Chirurgien opérateur</span>
-            <span>Aide-opérateur :</span>
-            <span>Infirmier :</span>
-            <span>Anesthésiste :</span>
-            <span>Personnel d'appui :</span>
-            <span>Autre :</span>
-          </div>
-{/*  DEBUT */}
-
-
-<div className="w-full lg:w-5/5">
+        {/* ACCORDEON */}
+        <div className="w-full lg:w-3/5">
 
           {/* 1.VISITES */}
           <div className="w-full border-collapse">
@@ -305,19 +265,8 @@ useEffect(() => {
           
         </div>
       </div>
-
-
-
-
-
-
-
-
-{/*    FIN */}
-        </div>
-      </div>
-    
+    </div>
   )
 }
 
-export default SBlocInterventionPage
+export default SMedecineInterneHospitalisationPage

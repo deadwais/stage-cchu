@@ -3,6 +3,8 @@ import { useState } from 'react';
 import { Box } from '@mui/material';
 import { DataGrid, GridActionsCellItem, GridToolbar } from "@mui/x-data-grid"
 import ContentPasteGoIcon from '@mui/icons-material/ContentPasteGo';
+import Link from 'next/link';
+import { useRouter } from 'next/navigation';
 /* const columns = [
   { field: 'id', headerName: 'ID', width: 60 },
   { field: 'nomPrenoms', headerName: 'Nom et Prénoms', width: 300 },
@@ -24,6 +26,7 @@ const Data = [
 ];
 */
 export default function Tableau() {
+  const router = useRouter();
   const [data, setData] = useState({
     rows: [  { id: 1, nomPrenoms: "RAKOTO Randria", dateNaiss: "15 Mai 1978", sexe: "M", adresse: "Lot 45H Antarandolo" },
     { id: 2, nomPrenoms: "RALAVANARANA Tsihitizaiataoazy Fatenalavaloatra", dateNaiss: "1 Janvier 2000", sexe: "F", adresse: "Lot ???? Anyhoany" },
@@ -47,17 +50,17 @@ export default function Tableau() {
             headerName: 'Dossier',
             type: 'actions',
             width: 160,
-           getActions: ( ) => [
+           getActions: (params) => [
                 // eslint-disable-next-line react/jsx-key
-                <GridActionsCellItem
-                   icon={<ContentPasteGoIcon  style={{   fontSize: '40px', 
+              <Link  href={`/pole-chirurgie/service-bloc/dossier-medical?id=${params.id}`} >   <GridActionsCellItem
+                 icon={<ContentPasteGoIcon  style={{   fontSize: '40px', 
                     borderRadius: '20%', 
                     backgroundColor: '01CC87', 
                     color: 'white',
-                    padding: '5px' }} />}
+                    padding: '5px' }}  />}
                    
-                   
-                />  ,
+               // onClick={() =>Naviguer(params.row.id)} 
+                /> </Link>   ,
                 // eslint-disable-next-line react/jsx-keyfontSize: '40px', borderRadius:'2px', color:'white' 
                 /*<GridActionsCellItem
                 icon={< DeleteOutlined  style={{ fontSize: '20px' }} />}
@@ -71,6 +74,9 @@ export default function Tableau() {
 
     ]
 })
+const Naviguer =(id)=>{
+  router.push(`/pole-chirurgie/service-bloc/dossier-intervention?id=${id}`);
+}
 const getRowId = (row) =>{ 
   return row.id
 }
@@ -105,3 +111,5 @@ const getRowId = (row) =>{
     </Box>
   );
 }
+
+
